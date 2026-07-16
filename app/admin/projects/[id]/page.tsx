@@ -176,6 +176,11 @@ export default function AdminSingleProjectPage() {
 
  // (Styled XML Spreadsheet for Excel)
  function handleDownloadExcel() {
+  if (!project) {
+    alert("Data ya mradi bado inapakia, tafadhali subiri kidogo!");
+    return;
+  }
+  
   if (filteredContributions.length === 0) {
     alert("Hakuna data ya kuzalishia ripoti kwa sasa kulingana na mchujo uliopo!");
     return;
