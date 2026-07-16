@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/utils/supabase';
+import Link from 'next/link';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -49,10 +50,19 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-zinc-950 px-4">
+      <Link 
+        href="/" 
+        className="absolute top-6 left-6 text-zinc-400 hover:text-white text-sm font-bold flex items-center gap-2 transition-colors"
+      >
+        ← Rudi Nyumbani
+      </Link>
       <div className="max-w-md w-full space-y-8 bg-zinc-900 p-8 rounded-xl border border-zinc-850 shadow-2xl">
-        <div className="text-center">
-          <span className="text-4xl">🕌</span>
-          <h2 className="mt-4 text-3xl font-extrabold text-white">Ingia Utawalani</h2>
+      <div className="text-center flex flex-col items-center">
+          <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center border-2 border-emerald-900 mb-4">
+             <img src="/maarima-logo.png" alt="Maarima Logo" className="w-12 h-12" />
+          </div>
+          
+          <h2 className="text-3xl font-extrabold text-white">Ingia Utawalani</h2>
           <p className="mt-2 text-sm text-zinc-400">
             Mfumo wa Michango ya Maarima Madrassa
           </p>

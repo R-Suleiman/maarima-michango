@@ -51,8 +51,11 @@ export default function AdminSingleProjectPage() {
   const [searchQuery, setSearchQuery] = useState('');
   
   // Vichungi vya Muda vya Jedwali (Time Filters)
-  const [selectedMonthFilter, setSelectedMonthFilter] = useState('');
-  const [selectedYearFilter, setSelectedYearFilter] = useState('');
+  const currentDate = new Date();
+  const currentMonth = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+  const currentYear = currentDate.getFullYear().toString();
+  const [selectedMonthFilter, setSelectedMonthFilter] = useState(currentMonth);
+  const [selectedYearFilter, setSelectedYearFilter] = useState(currentYear);
 
   const [loading, setLoading] = useState(true);
 

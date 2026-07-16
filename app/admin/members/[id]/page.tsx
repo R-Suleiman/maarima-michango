@@ -333,7 +333,7 @@ export default function AdminSingleMemberPage() {
           <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2 shadow-sm">
             <div className="text-sm">
               <span className="font-semibold text-emerald-900">Jumla kwa mchujo wa sasa: </span>
-              <span className="text-zinc-650">
+              <span className="text-zinc-600">
                 {selectedProjectObj ? `[${selectedProjectObj.name}]` : "Miradi yote"}
                 {selectedMonthFilter && ` - Mwezi: ${MIEZI.find(m => m.value === selectedMonthFilter)?.label}`}
                 {selectedYearFilter && ` - Mwaka: ${selectedYearFilter}`}
